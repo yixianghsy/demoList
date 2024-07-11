@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  *
  *
- *该类这个章节的重点
+ *
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  * @description Bean definition reader for XML bean definitions.
  * @date 2022/3/9
@@ -62,11 +62,13 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         loadBeanDefinitions(resource);
     }
 
-    /**
-     * 解析xml文件
-     * @param inputStream
-     * @throws ClassNotFoundException
-     */
+    @Override
+    public void loadBeanDefinitions(String... locations) throws BeansException {
+        for (String location : locations) {
+            loadBeanDefinitions(location);
+        }
+    }
+
     protected void doLoadBeanDefinitions(InputStream inputStream) throws ClassNotFoundException {
         Document doc = XmlUtil.readXML(inputStream);
         Element root = doc.getDocumentElement();
@@ -105,7 +107,6 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                 // 获取属性值：引入对象、值对象
                 Object value = StrUtil.isNotEmpty(attrRef) ? new BeanReference(attrRef) : attrValue;
                 // 创建属性信息
-                //  上一个章节这个在test中用过
                 PropertyValue propertyValue = new PropertyValue(attrName, value);
                 beanDefinition.getPropertyValues().addPropertyValue(propertyValue);
             }
