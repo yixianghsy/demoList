@@ -19,9 +19,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modules>
-<!--        <module>rabbitMQDeme</module>-->
+        <module>rabbitMQDeme</module>
         <module>springboot-swagger</module>
-<!--        <module>sharging-jdbc-shardingsphere</module>-->
+        <module>sharging-jdbc-shardingsphere</module>
         <module>springboot-elk</module>
         <module>springboot-websocket</module>
         <module>springboot-mybatis</module>
