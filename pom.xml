@@ -27,7 +27,7 @@
 <!--        <module>springboot-mybatis</module>-->
 <!--        <module>mall-sso</module>-->
 <!--        <module>springboot-dubbo</module>-->
-<!--        <module>mall-common</module>-->
+        <module>mall-common</module>
     </modules>
     <dependencies>
         <dependency>
