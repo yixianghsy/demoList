@@ -20,13 +20,11 @@
     </parent>
     <modules>
 <!--        <module>rabbitMQDeme</module>-->
-<!--        <module>springboot-swagger</module>-->
+        <module>springboot-swagger</module>
 <!--        <module>sharging-jdbc-shardingsphere</module>-->
-<!--        <module>springboot-elk</module>-->
-<!--        <module>springboot-websocket</module>-->
-<!--        <module>springboot-mybatis</module>-->
-<!--        <module>mall-sso</module>-->
-<!--        <module>springboot-dubbo</module>-->
+        <module>springboot-elk</module>
+        <module>springboot-websocket</module>
+        <module>springboot-mybatis</module>
         <module>mall-common</module>
     </modules>
     <dependencies>

@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+logging:
+#  config: classpath:log/logback-spring.xml
+  config: classpath:log/logback.xml
+spring:
+  application:
+    name: elkTest
