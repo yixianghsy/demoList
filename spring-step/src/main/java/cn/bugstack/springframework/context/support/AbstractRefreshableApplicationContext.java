@@ -1,4 +1,5 @@
 package cn.bugstack.springframework.context.support;
+
 import cn.bugstack.springframework.beans.BeansException;
 import cn.bugstack.springframework.beans.factory.ConfigurableListableBeanFactory;
 import cn.bugstack.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -18,6 +19,7 @@ import cn.bugstack.springframework.beans.factory.support.DefaultListableBeanFact
  *
  */
 public abstract class AbstractRefreshableApplicationContext extends AbstractApplicationContext {
+
     private DefaultListableBeanFactory beanFactory;
 
     @Override
@@ -37,4 +39,5 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
     protected ConfigurableListableBeanFactory getBeanFactory() {
         return beanFactory;
     }
+
 }
