@@ -14,12 +14,17 @@ import java.util.Set;
  *
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  * @description 通用的注册表实现
- * 单例bean的创建
  * @date 2022/03/07
  *
  *
  */
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
+
+    /**
+     * Internal marker for a null singleton object:
+     * used as marker value for concurrent Maps (which don't support null values).
+     */
+    protected static final Object NULL_OBJECT = new Object();
 
     private Map<String, Object> singletonObjects = new HashMap<>();
 
