@@ -11,6 +11,7 @@ package cn.bugstack.springframework.beans.factory.config;
  *
  */
 public class BeanReference {
+
     private final String beanName;
 
     public BeanReference(String beanName) {
@@ -20,4 +21,5 @@ public class BeanReference {
     public String getBeanName() {
         return beanName;
     }
+
 }

@@ -33,4 +33,5 @@ public interface BeanPostProcessor {
      * @throws BeansException
      */
     Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException;
+
 }

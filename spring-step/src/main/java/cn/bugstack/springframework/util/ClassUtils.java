@@ -1,6 +1,7 @@
 package cn.bugstack.springframework.util;
 
 public class ClassUtils {
+
     public static ClassLoader getDefaultClassLoader() {
         ClassLoader cl = null;
         try {
@@ -15,4 +16,5 @@ public class ClassUtils {
         }
         return cl;
     }
+
 }

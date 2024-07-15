@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  * @description Support base class for singleton registries which need to handle
- * {@link cn.bugstack.springframework.beans.factory.FactoryBean} instances,
+ * {@link FactoryBean} instances,
  * integrated with {@link DefaultSingletonBeanRegistry}'s singleton management.
  * @date 2022/3/11
  *  /CodeDesignTutorials

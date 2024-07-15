@@ -17,7 +17,7 @@ import cn.bugstack.springframework.context.ApplicationContextAware;
  */
 public class ApplicationContextAwareProcessor implements BeanPostProcessor {
 
-    private  final ApplicationContext applicationContext;
+    private final ApplicationContext applicationContext;
 
     public ApplicationContextAwareProcessor(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
@@ -35,4 +35,5 @@ public class ApplicationContextAwareProcessor implements BeanPostProcessor {
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         return bean;
     }
+
 }
