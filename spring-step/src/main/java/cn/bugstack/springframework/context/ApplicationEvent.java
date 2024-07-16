@@ -14,6 +14,7 @@ import java.util.EventObject;
  *具备时间功能的抽象类
  */
 public abstract class ApplicationEvent extends EventObject {
+
     /**
      * Constructs a prototypical Event.
      *
@@ -23,4 +24,5 @@ public abstract class ApplicationEvent extends EventObject {
     public ApplicationEvent(Object source) {
         super(source);
     }
+
 }

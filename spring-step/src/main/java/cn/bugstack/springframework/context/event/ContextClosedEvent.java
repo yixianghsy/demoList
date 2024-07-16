@@ -1,6 +1,5 @@
 package cn.bugstack.springframework.context.event;
 
-
 /**
  *
  *

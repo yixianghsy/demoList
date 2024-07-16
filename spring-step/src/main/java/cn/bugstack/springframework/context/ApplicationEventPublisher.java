@@ -19,4 +19,5 @@ public interface ApplicationEventPublisher {
      * @param event the event to publish
      */
     void publishEvent(ApplicationEvent event);
+
 }
