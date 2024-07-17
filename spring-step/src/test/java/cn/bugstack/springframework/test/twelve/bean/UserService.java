@@ -1,4 +1,4 @@
-package cn.bugstack.springframework.test.bean;
+package cn.bugstack.springframework.test.twelve.bean;
 
 import java.util.Random;
 

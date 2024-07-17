@@ -12,7 +12,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Spring {@link cn.bugstack.springframework.aop.Pointcut} implementation
+ * Spring {@link Pointcut} implementation
  * that uses the AspectJ weaver to evaluate a pointcut expression.
  * <p>
  * 切点表达式
@@ -25,7 +25,6 @@ public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodM
 
     private static final Set<PointcutPrimitive> SUPPORTED_PRIMITIVES = new HashSet<PointcutPrimitive>();
 
-
     static {
         SUPPORTED_PRIMITIVES.add(PointcutPrimitive.EXECUTION);
     }
@@ -36,6 +35,7 @@ public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodM
         PointcutParser pointcutParser = PointcutParser.getPointcutParserSupportingSpecifiedPrimitivesAndUsingSpecifiedClassLoaderForResolution(SUPPORTED_PRIMITIVES, this.getClass().getClassLoader());
         pointcutExpression = pointcutParser.parsePointcutExpression(expression);
     }
+
     @Override
     public boolean matches(Class<?> clazz) {
         return pointcutExpression.couldMatchJoinPointsInType(clazz);
@@ -43,7 +43,7 @@ public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodM
 
     @Override
     public boolean matches(Method method, Class<?> targetClass) {
-        return pointcutExpression.matchesAdviceExecution(method).alwaysMatches();
+        return pointcutExpression.matchesMethodExecution(method).alwaysMatches();
     }
 
     @Override
@@ -55,4 +55,5 @@ public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodM
     public MethodMatcher getMethodMatcher() {
         return this;
     }
+
 }

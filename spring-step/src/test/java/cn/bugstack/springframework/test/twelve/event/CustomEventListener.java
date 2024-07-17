@@ -1,4 +1,4 @@
-package cn.bugstack.springframework.test.event;
+package cn.bugstack.springframework.test.twelve.event;
 
 import cn.bugstack.springframework.context.ApplicationListener;
 
