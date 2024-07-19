@@ -45,7 +45,7 @@ public class DisposableBeanAdapter implements DisposableBean {
             }
             destroyMethod.invoke(bean);
         }
-        
+
     }
 
 }

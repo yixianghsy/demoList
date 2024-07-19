@@ -21,7 +21,7 @@ import java.util.Properties;
  * i.e. a properties file. Useful for custom config files targeted at system
  * administrators that override bean properties configured in the application context.
  * @date 2022/3/14
- *加载读取配置文件
+ *
  *
  */
 public class PropertyPlaceholderConfigurer implements BeanFactoryPostProcessor {
