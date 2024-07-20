@@ -1,20 +1,14 @@
 package com.hsy.Observer;
 
+/**
+ * 主题：天气变化管理接口
+ * Created by mrf on 2016/3/1.
+ */
 public interface Subject {
-    /**
-     * 注册观察者
-     * @param observer
-     */
-    public void registerObserver(Observer observer);
-
-    /**
-     * 删除观察者
-     * @param observer
-     */
-    public void removeOberver(Observer observer);
-
-    /**
-     * 当主题状态发生改变时，这个方法需要被调用，以通知所有观察者
-     */
-    public void notifyObserver();
+    //注册观察者
+    public void registerObserver(Observer o);
+    //移除观察者
+    public void removeObserver(Observer o);
+    //当天气改变时，这个方法会被调用，以通知所有的观察者
+    public void notifyObservers();
 }
