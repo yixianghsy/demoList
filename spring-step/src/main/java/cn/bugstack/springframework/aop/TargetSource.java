@@ -3,15 +3,13 @@ package cn.bugstack.springframework.aop;
 import cn.bugstack.springframework.util.ClassUtils;
 
 /**
- * A <code>TargetSource</code> is used to obtain the current "target" of
+ *
+ * @description 被代理的目标对象  A <code>TargetSource</code> is used to obtain the current "target" of
  * an AOP invocation, which will be invoked via reflection if no around
  * advice chooses to end the interceptor chain itself.
- * <p>
- * 被代理的目标对象
- * <p>
- * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- * 公众号：bugstack虫洞栈
- * Create by 小傅哥(fustack)
+ * @date 2022/3/15
+ *  /CodeDesignTutorials
+ *
  */
 public class TargetSource {
 

@@ -9,15 +9,11 @@ import cn.bugstack.springframework.core.convert.converter.ConverterRegistry;
 import cn.bugstack.springframework.core.convert.converter.GenericConverter;
 import cn.bugstack.springframework.core.convert.support.DefaultConversionService;
 import cn.bugstack.springframework.core.convert.support.GenericConversionService;
-import com.sun.istack.internal.Nullable;
 
 import java.util.Set;
 
 /**
  *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  * @description 提供创建 ConversionService 工厂
  * @date 2022/3/16
  *
@@ -25,10 +21,8 @@ import java.util.Set;
  */
 public class ConversionServiceFactoryBean implements FactoryBean<ConversionService>, InitializingBean {
 
-    @Nullable
     private Set<?> converters;
 
-    @Nullable
     private GenericConversionService conversionService;
 
     @Override

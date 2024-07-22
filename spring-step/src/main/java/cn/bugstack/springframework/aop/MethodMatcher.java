@@ -16,5 +16,5 @@ public interface MethodMatcher {
      * @return whether or not this method matches statically
      */
     boolean matches(Method method, Class<?> targetClass);
-
+    
 }

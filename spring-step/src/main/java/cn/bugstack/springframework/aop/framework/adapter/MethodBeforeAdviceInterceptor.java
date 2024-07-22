@@ -6,10 +6,7 @@ import org.aopalliance.intercept.MethodInvocation;
 
 /**
  *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description Interceptor to wrap am {@link cn.bugstack.springframework.aop.MethodBeforeAdvice}.
+ * @description Interceptor to wrap am {@link MethodBeforeAdvice}.
  * Used internally by the AOP framework; application developers should not need
  * to use this class directly.
  * @date 2022/3/14

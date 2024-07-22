@@ -3,13 +3,9 @@ package cn.bugstack.springframework.core.convert.support;
 import cn.bugstack.springframework.core.convert.converter.Converter;
 import cn.bugstack.springframework.core.convert.converter.ConverterFactory;
 import cn.bugstack.springframework.util.NumberUtils;
-import com.sun.istack.internal.Nullable;
 
 /**
  *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  * @description Converts from a String any JDK-standard Number implementation.
  * @date 2022/3/16
  *
@@ -31,7 +27,6 @@ public class StringToNumberConverterFactory implements ConverterFactory<String, 
         }
 
         @Override
-        @Nullable
         public T convert(String source) {
             if (source.isEmpty()) {
                 return null;

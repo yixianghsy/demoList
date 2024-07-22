@@ -5,13 +5,10 @@ import cn.bugstack.springframework.context.ApplicationEvent;
 
 /**
  *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  * @description Base class for events raised for an <code>ApplicationContext</code>.
  * @date 2022/3/13
  *  /CodeDesignTutorials
- *定义事件的抽象类，包括关闭，刷新及用户自己实现的事件
+ *
  */
 public class ApplicationContextEvent extends ApplicationEvent {
 
