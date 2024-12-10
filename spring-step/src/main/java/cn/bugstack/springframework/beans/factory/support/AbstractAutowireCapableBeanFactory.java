@@ -112,7 +112,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
             registerDisposableBean(beanName, new DisposableBeanAdapter(bean, beanName, beanDefinition));
         }
     }
-
+    //执行前置处理和后置处理
     private Object initializeBean(String beanName, Object bean, BeanDefinition beanDefinition) {
 
         // invokeAwareMethods
