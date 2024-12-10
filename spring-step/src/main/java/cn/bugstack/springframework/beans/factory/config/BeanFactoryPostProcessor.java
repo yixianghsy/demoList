@@ -5,10 +5,13 @@ import cn.bugstack.springframework.beans.factory.ConfigurableListableBeanFactory
 
 /**
  *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  * @description 允许自定义修改 BeanDefinition 属性信息
  * @date 2022/3/10
  *  /CodeDesignTutorials
- *  设计AOP切面技术
+ *
  */
 public interface BeanFactoryPostProcessor {
 

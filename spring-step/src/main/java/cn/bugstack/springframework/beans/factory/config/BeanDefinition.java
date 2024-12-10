@@ -4,16 +4,15 @@ import cn.bugstack.springframework.beans.PropertyValues;
 
 /**
  *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  * @description 定义 Bean 实例信息
  * @date 2022/03/07
  *
  *
  */
 public class BeanDefinition {
-
-    String SCOPE_SINGLETON = ConfigurableBeanFactory.SCOPE_SINGLETON;
-
-    String SCOPE_PROTOTYPE = ConfigurableBeanFactory.SCOPE_PROTOTYPE;
 
     private Class beanClass;
 
@@ -23,33 +22,14 @@ public class BeanDefinition {
 
     private String destroyMethodName;
 
-    private String scope = SCOPE_SINGLETON;
-
-    private boolean singleton = true;
-
-    private boolean prototype = false;
-
     public BeanDefinition(Class beanClass) {
-        this(beanClass, null);
+        this.beanClass = beanClass;
+        this.propertyValues = new PropertyValues();
     }
 
     public BeanDefinition(Class beanClass, PropertyValues propertyValues) {
         this.beanClass = beanClass;
         this.propertyValues = propertyValues != null ? propertyValues : new PropertyValues();
-    }
-
-    public void setScope(String scope) {
-        this.scope = scope;
-        this.singleton = SCOPE_SINGLETON.equals(scope);
-        this.prototype = SCOPE_PROTOTYPE.equals(scope);
-    }
-
-    public boolean isSingleton() {
-        return singleton;
-    }
-
-    public boolean isPrototype() {
-        return prototype;
     }
 
     public Class getBeanClass() {
