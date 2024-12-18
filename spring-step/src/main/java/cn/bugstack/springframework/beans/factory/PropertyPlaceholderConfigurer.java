@@ -13,16 +13,13 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description Allows for configuration of individual bean property values from a property resource,
+ * Allows for configuration of individual bean property values from a property resource,
  * i.e. a properties file. Useful for custom config files targeted at system
  * administrators that override bean properties configured in the application context.
- * @date 2022/3/14
- *
- *
+ * <p>
+ * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
+ * 公众号：bugstack虫洞栈
+ * Create by 小傅哥(fustack)
  */
 public class PropertyPlaceholderConfigurer implements BeanFactoryPostProcessor {
 
@@ -65,7 +62,7 @@ public class PropertyPlaceholderConfigurer implements BeanFactoryPostProcessor {
             // 向容器中添加字符串解析器，供解析@Value注解使用
             StringValueResolver valueResolver = new PlaceholderResolvingStringValueResolver(properties);
             beanFactory.addEmbeddedValueResolver(valueResolver);
-
+            
         } catch (IOException e) {
             throw new BeansException("Could not load properties", e);
         }

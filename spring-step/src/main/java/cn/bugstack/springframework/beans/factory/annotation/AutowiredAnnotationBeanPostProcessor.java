@@ -12,17 +12,16 @@ import cn.hutool.core.bean.BeanUtil;
 import java.lang.reflect.Field;
 
 /**
- *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description 处理 @Value、@Autowired，注解的 BeanPostProcessor {@link cn.bugstack.springframework.beans.factory.config.BeanPostProcessor} implementation
+ * {@link cn.bugstack.springframework.beans.factory.config.BeanPostProcessor} implementation
  * that autowires annotated fields, setter methods and arbitrary config methods.
  * Such members to be injected are detected through a Java 5 annotation: by default,
  * Spring's {@link Autowired @Autowired} and {@link Value @Value} annotations.
- * @date 2022/3/15
- *  /CodeDesignTutorials
- *
+ * <p>
+ * 处理 @Value、@Autowired，注解的 BeanPostProcessor
+ * <p>
+ * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
+ * 公众号：bugstack虫洞栈
+ * Create by 小傅哥(fustack)
  */
 public class AutowiredAnnotationBeanPostProcessor implements InstantiationAwareBeanPostProcessor, BeanFactoryAware {
 
@@ -74,6 +73,11 @@ public class AutowiredAnnotationBeanPostProcessor implements InstantiationAwareB
     @Override
     public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
         return null;
+    }
+
+    @Override
+    public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
+        return true;
     }
 
     @Override

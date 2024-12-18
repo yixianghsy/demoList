@@ -7,18 +7,15 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description Support base class for singleton registries which need to handle
+ * Support base class for singleton registries which need to handle
  * {@link cn.bugstack.springframework.beans.factory.FactoryBean} instances,
  * integrated with {@link DefaultSingletonBeanRegistry}'s singleton management.
- * @date 2022/3/11
- *  /CodeDesignTutorials
- *
+ * <p>
+ * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
+ * 公众号：bugstack虫洞栈
+ * Create by 小傅哥(fustack)
  */
-public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanRegistry{
+public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanRegistry {
 
     /**
      * Cache of singleton objects created by FactoryBeans: FactoryBean name --> object

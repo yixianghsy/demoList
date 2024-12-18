@@ -5,16 +5,9 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 /**
- *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description Interceptor to wrap am {@link cn.bugstack.springframework.aop.MethodBeforeAdvice}.
+ * Interceptor to wrap am {@link cn.bugstack.springframework.aop.MethodBeforeAdvice}.
  * Used internally by the AOP framework; application developers should not need
  * to use this class directly.
- * @date 2022/3/14
- *  /CodeDesignTutorials
- *
  */
 public class MethodBeforeAdviceInterceptor implements MethodInterceptor {
 
@@ -33,4 +26,11 @@ public class MethodBeforeAdviceInterceptor implements MethodInterceptor {
         return methodInvocation.proceed();
     }
 
+    public MethodBeforeAdvice getAdvice() {
+        return advice;
+    }
+
+    public void setAdvice(MethodBeforeAdvice advice) {
+        this.advice = advice;
+    }
 }
