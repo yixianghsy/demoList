@@ -3,9 +3,14 @@ package cn.bugstack.springframework.beans.factory.config;
 import cn.bugstack.springframework.beans.PropertyValues;
 
 /**
- * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- * 公众号：bugstack虫洞栈
- * Create by 小傅哥(fustack)
+ *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * @description 定义 Bean 实例信息
+ * @date 2022/03/07
+ *
+ *
  */
 public class BeanDefinition {
 
@@ -81,4 +86,5 @@ public class BeanDefinition {
     public void setDestroyMethodName(String destroyMethodName) {
         this.destroyMethodName = destroyMethodName;
     }
+
 }

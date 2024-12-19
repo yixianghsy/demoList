@@ -6,11 +6,14 @@ import cn.bugstack.springframework.beans.factory.config.BeanDefinition;
 import java.lang.reflect.Constructor;
 
 /**
- * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- * 公众号：bugstack虫洞栈
- * Create by 小傅哥(fustack)
- * <p>
- * Bean 实例化策略
+ *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * @description Bean 实例化策略接口
+ * @date 2022/03/08
+ *
+ *
  */
 public interface InstantiationStrategy {
 

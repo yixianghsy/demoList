@@ -5,6 +5,16 @@ import cn.hutool.core.lang.Assert;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * @description 默认实现的资源处理器
+ * @date 2022/3/9
+ *
+ *
+ */
 public class DefaultResourceLoader implements ResourceLoader {
 
     @Override

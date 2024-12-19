@@ -15,12 +15,15 @@ import java.util.LinkedList;
 import java.util.Set;
 
 /**
- * Abstract implementation of the {@link ApplicationEventMulticaster} interface,
+ *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * @description Abstract implementation of the {@link ApplicationEventMulticaster} interface,
  * providing the basic listener registration facility.
- * <p>
- * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- * 公众号：bugstack虫洞栈
- * Create by 小傅哥(fustack)
+ * @date 2022/3/13
+ *  /CodeDesignTutorials
+ *
  */
 public abstract class AbstractApplicationEventMulticaster implements ApplicationEventMulticaster, BeanFactoryAware {
 

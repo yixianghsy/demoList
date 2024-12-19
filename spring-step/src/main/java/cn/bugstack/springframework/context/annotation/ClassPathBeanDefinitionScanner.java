@@ -17,6 +17,19 @@ import java.util.Set;
  * 公众号：bugstack虫洞栈
  * Create by 小傅哥(fustack)
  */
+
+/**
+ *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * @description A bean definition scanner that detects bean candidates on the classpath,
+ * registering corresponding bean definitions with a given registry ({@code BeanFactory}
+ * or {@code ApplicationContext}).
+ * @date 2022/3/14
+ *
+ *
+ */
 public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateComponentProvider {
 
     private BeanDefinitionRegistry registry;
