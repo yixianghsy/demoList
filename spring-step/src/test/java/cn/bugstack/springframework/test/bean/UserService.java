@@ -1,39 +1,19 @@
 package cn.bugstack.springframework.test.bean;
 
-import java.util.Random;
-
 /**
- * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- * 公众号：bugstack虫洞栈
- * Create by 小傅哥(fustack)
+ *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * @description 模拟用户 Bean 对象
+ * @date 2022/2/9
+ *
+ *
  */
-public class UserService implements IUserService {
+public class UserService {
 
-    private String token;
-
-    public String queryUserInfo() {
-        try {
-            Thread.sleep(new Random(1).nextInt(100));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return "小傅哥，100001，深圳，" + token;
+    public void queryUserInfo(){
+        System.out.println("查询用户信息");
     }
 
-    public String register(String userName) {
-        try {
-            Thread.sleep(new Random(1).nextInt(100));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return "注册用户：" + userName + " success！";
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 }

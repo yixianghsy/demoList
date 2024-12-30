@@ -1,42 +1,34 @@
 package cn.bugstack.springframework.test;
 
-import cn.bugstack.springframework.context.support.ClassPathXmlApplicationContext;
-import cn.bugstack.springframework.core.convert.converter.Converter;
-import cn.bugstack.springframework.core.convert.support.StringToNumberConverterFactory;
-import cn.bugstack.springframework.test.bean.Husband;
-import cn.bugstack.springframework.test.converter.StringToIntegerConverter;
+import cn.bugstack.springframework.BeanDefinition;
+import cn.bugstack.springframework.BeanFactory;
+import cn.bugstack.springframework.test.bean.UserService;
 import org.junit.Test;
 
 /**
- * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
- * 公众号：bugstack虫洞栈
- * Create by 小傅哥(fustack)
+ * @description 测试类
+ *
+ *
+ *
+ * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
+ * @date 2022/2/9
+ *
+ *
  */
 public class ApiTest {
 
     @Test
-    public void test_convert() {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
-        Husband husband = applicationContext.getBean("husband", Husband.class);
-        System.out.println("测试结果：" + husband);
-    }
+    public void test_BeanFactory(){
+        // 1.初始化 BeanFactory
+        BeanFactory beanFactory = new BeanFactory();
 
-    @Test
-    public void test_StringToIntegerConverter() {
-        StringToIntegerConverter converter = new StringToIntegerConverter();
-        Integer num = converter.convert("1234");
-        System.out.println("测试结果：" + num);
-    }
+        // 2.注入bean
+        BeanDefinition beanDefinition = new BeanDefinition(new UserService());
+        beanFactory.registerBeanDefinition("userService", beanDefinition);
 
-    @Test
-    public void test_StringToNumberConverterFactory() {
-        StringToNumberConverterFactory converterFactory = new StringToNumberConverterFactory();
-
-        Converter<String, Integer> stringToIntegerConverter = converterFactory.getConverter(Integer.class);
-        System.out.println("测试结果：" + stringToIntegerConverter.convert("1234"));
-
-        Converter<String, Long> stringToLongConverter = converterFactory.getConverter(Long.class);
-        System.out.println("测试结果：" + stringToLongConverter.convert("1234"));
+        // 3.获取bean
+        UserService userService = (UserService) beanFactory.getBean("userService");
+        userService.queryUserInfo();
     }
 
 }
