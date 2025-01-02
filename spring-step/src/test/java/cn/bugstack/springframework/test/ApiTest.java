@@ -1,7 +1,7 @@
 package cn.bugstack.springframework.test;
 
 import cn.bugstack.springframework.context.support.ClassPathXmlApplicationContext;
-import cn.bugstack.springframework.test.bean.UserService;
+import cn.bugstack.springframework.test.event.CustomEvent;
 import org.junit.Test;
 
 /**
@@ -17,18 +17,11 @@ import org.junit.Test;
 public class ApiTest {
 
     @Test
-    public void test_xml() {
-        // 1.初始化 BeanFactory
+    public void test_event() {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+        applicationContext.publishEvent(new CustomEvent(applicationContext, 1019129009086763L, "成功了！"));
+
         applicationContext.registerShutdownHook();
-
-        // 2. 获取Bean对象调用方法
-        UserService userService = applicationContext.getBean("userService", UserService.class);
-        String result = userService.queryUserInfo();
-        System.out.println("测试结果：" + result);
-
-        System.out.println("ApplicationContextAware："+userService.getApplicationContext());
-        System.out.println("BeanFactoryAware："+userService.getBeanFactory());
     }
 
 }
