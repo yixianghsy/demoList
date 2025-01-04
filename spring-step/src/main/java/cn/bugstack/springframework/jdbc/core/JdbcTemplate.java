@@ -1,14 +1,12 @@
 package cn.bugstack.springframework.jdbc.core;
 
+import cn.bugstack.springframework.jdbc.UncategorizedSQLException;
 import cn.bugstack.springframework.jdbc.datasource.DataSourceUtils;
 import cn.bugstack.springframework.jdbc.support.JdbcAccessor;
 import cn.hutool.core.lang.Assert;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
 import java.util.Map;
 
@@ -79,7 +77,15 @@ public class JdbcTemplate extends JdbcAccessor implements JdbcOperations {
             applyStatementSettings(stmt);
             return action.doInStatement(stmt);
         } catch (SQLException ex) {
-            throw new RuntimeException("StatementCallback", ex);
+            throw new UncategorizedSQLException("ConnectionCallback", getSql(action), ex);
+        }
+    }
+
+    private static String getSql(Object sqlProvider) {
+        if (sqlProvider instanceof SqlProvider) {
+            return ((SqlProvider) sqlProvider).getSql();
+        } else {
+            return null;
         }
     }
 

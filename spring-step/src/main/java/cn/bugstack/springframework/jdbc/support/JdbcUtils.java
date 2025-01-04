@@ -1,7 +1,9 @@
 package cn.bugstack.springframework.jdbc.support;
 
+import cn.bugstack.springframework.util.NumberUtils;
 import cn.hutool.core.util.StrUtil;
 
+import java.math.BigDecimal;
 import java.sql.*;
 
 /**

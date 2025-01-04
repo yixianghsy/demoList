@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /**
  *
  * @description An interface used by {@link JdbcTemplate} for mapping rows of a
- * {@link java.sql.ResultSet} on a per-row basis.
+ * {@link ResultSet} on a per-row basis.
  * @date 2022/3/16
  *  /CodeDesignTutorials
  *
