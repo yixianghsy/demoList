@@ -49,4 +49,5 @@ public interface BeanFactory {
      * @throws BeansException 不能获取 Bean 对象，则抛出异常
      */
     <T> T getBean(Class<T> requiredType) throws BeansException;
+
 }

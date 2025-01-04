@@ -27,4 +27,3 @@ public interface SingletonBeanRegistry {
     void registerSingleton(String beanName, Object singletonObject);
 
 }
-                                                

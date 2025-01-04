@@ -7,13 +7,13 @@ import cn.bugstack.springframework.beans.BeansException;
  *
  *
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description 实现此接口，既能感知到所属的 BeanFactory
- * @date 2022/3/11
+ * @description Defines a factory which can return an Object instance (possibly shared or independent) when invoked.
+ * @date 2022/3/16
  *  /CodeDesignTutorials
  *
  */
-public interface BeanFactoryAware extends Aware {
+public interface ObjectFactory<T> {
 
-    void setBeanFactory(BeanFactory beanFactory) throws BeansException;
+    T getObject() throws BeansException;
 
 }
