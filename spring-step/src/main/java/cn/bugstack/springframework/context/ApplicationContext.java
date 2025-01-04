@@ -5,16 +5,15 @@ import cn.bugstack.springframework.beans.factory.ListableBeanFactory;
 import cn.bugstack.springframework.core.io.ResourceLoader;
 
 /**
- *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description 应用上下文接口 Central interface to provide configuration for an application.
+ * Central interface to provide configuration for an application.
  * This is read-only while the application is running, but may be
  * reloaded if the implementation supports this.
- * @date 2022/3/10
- *
- *
+ * <p>
+ * 应用上下文
+ * <p>
+ * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
+ * 公众号：bugstack虫洞栈
+ * Create by 小傅哥(fustack)
  */
-public interface ApplicationContext extends ListableBeanFactory, HierarchicalBeanFactory, ResourceLoader, ApplicationEventPublisher  {
+public interface ApplicationContext extends ListableBeanFactory, HierarchicalBeanFactory, ResourceLoader, ApplicationEventPublisher {
 }

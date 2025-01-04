@@ -3,17 +3,14 @@ package cn.bugstack.springframework.aop;
 import java.lang.reflect.Method;
 
 /**
- *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description Advice invoked before a method is invoked. Such advices cannot
+ * Advice invoked before a method is invoked. Such advices cannot
  * prevent the method call proceeding, unless they throw a Throwable.
- * @date 2022/3/14
- *  /CodeDesignTutorials
- *
+ * <p>
+ * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
+ * 公众号：bugstack虫洞栈
+ * Create by 小傅哥(fustack)
  */
-public interface MethodBeforeAdvice extends BeforeAdvice{
+public interface MethodBeforeAdvice extends BeforeAdvice {
 
     /**
      * Callback before a given method is invoked.

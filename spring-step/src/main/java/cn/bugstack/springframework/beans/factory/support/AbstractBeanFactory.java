@@ -24,10 +24,14 @@ import java.util.List;
  */
 public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport implements ConfigurableBeanFactory {
 
-    /** ClassLoader to resolve bean class names with, if necessary */
+    /**
+     * ClassLoader to resolve bean class names with, if necessary
+     */
     private ClassLoader beanClassLoader = ClassUtils.getDefaultClassLoader();
 
-    /** BeanPostProcessors to apply in createBean */
+    /**
+     * BeanPostProcessors to apply in createBean
+     */
     private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<BeanPostProcessor>();
 
     /**
@@ -52,7 +56,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 
     protected <T> T doGetBean(final String name, final Object[] args) {
         Object sharedInstance = getSingleton(name);
-        if (null != sharedInstance) {
+        if (sharedInstance != null) {
             // 如果是 FactoryBean，则需要调用 FactoryBean#getObject
             return (T) getObjectForBeanInstance(sharedInstance, name);
         }
@@ -77,12 +81,12 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
         return object;
     }
 
-    protected abstract BeanDefinition getBeanDefinition(String beanName);
+    protected abstract BeanDefinition getBeanDefinition(String beanName) throws BeansException;
 
-    protected abstract Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args);
+    protected abstract Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args) throws BeansException;
 
     @Override
-    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor){
+    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor) {
         this.beanPostProcessors.remove(beanPostProcessor);
         this.beanPostProcessors.add(beanPostProcessor);
     }
@@ -112,4 +116,5 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
     public ClassLoader getBeanClassLoader() {
         return this.beanClassLoader;
     }
+
 }

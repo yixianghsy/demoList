@@ -3,15 +3,12 @@ package cn.bugstack.springframework.context;
 import java.util.EventObject;
 
 /**
- *
- *
- *
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- * @description Class to be extended by all application events. Abstract as it
+ * Class to be extended by all application events. Abstract as it
  * doesn't make sense for generic events to be published directly.
- * @date 2022/3/13
- *  /CodeDesignTutorials
  *
+ * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
+ * 公众号：bugstack虫洞栈
+ * Create by 小傅哥(fustack)
  */
 public abstract class ApplicationEvent extends EventObject {
 
